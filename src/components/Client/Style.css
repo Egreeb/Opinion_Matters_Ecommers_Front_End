@@ -507,6 +507,10 @@ main {
    .ClientuserCard{
     width: unset;
   }
+   .userCard{
+    width: unset;
+    padding: unset;
+  } 
 }
 
 /* ====== Small devices (phones, landscape) ====== */
