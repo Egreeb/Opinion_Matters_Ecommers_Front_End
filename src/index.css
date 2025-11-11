@@ -1,0 +1,30 @@
+.qtyfunc{
+    display: flex;
+    align-items: center;
+}
+.qtyfunc input{
+    width: 60px;
+}
+
+.qtyfunc a{
+    margin: 0px 10px;
+}
+
+.productqtyfunc{
+    display: flex;
+    align-items: center;
+}
+.productqtyfunc a{
+    background-color: rgb(233, 69, 96);
+    color: #fff;
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input {
+  -moz-appearance: textfield;
+}

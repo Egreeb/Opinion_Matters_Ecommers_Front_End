@@ -1,0 +1,106 @@
+.side-bar{
+    width: 250px; 
+    background-color: rgb(17, 17, 44);
+    height: 100vh;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(33, 33, 65);
+    justify-content: space-between;
+    padding: 10px;
+}
+.side-bar ul li{
+    color: #ffff;
+}
+.togglebtn{
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.togglebtn .arrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.togglebtn .left{
+    border-width: 8px 10px 8px 0px;
+    border-color: transparent white transparent transparent;
+}
+
+.togglebtn .right{
+    border-width: 8px 0px 8px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.side-bar.close{
+    width: 80px;
+}
+
+.logo h2{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.nav-menu ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.nav-menu ul li{
+    padding: 10px 20px;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.nav-menu ul li:hover{
+    background-color: gray;
+}
+.main_dashboard .row{
+    width: 100%;
+
+}
+.nav-menu .lisym{
+    display: flex;
+}
+.header{
+    background-color: rgb(17, 17, 44);
+    color: #fff;
+    text-align: right;
+    padding: 5px;
+}
+.products .card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-toggler{
+    font-size: unset;
+}
+
+.users .card-header{
+        background-color: darkslategrey;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.products .card-header{
+        background-color: darkslategrey;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}

@@ -1,0 +1,66 @@
+.background{
+    background-image: url("../../assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh
+}
+
+.login_form{
+    background-color: transparent;
+    color: #ffff;
+    border: 2px solid #fff;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-right-radius: 60px;
+}
+.login_form img{
+width: 250px;
+}
+
+.login_form .card-header{
+    background-color: mintcream;
+}
+
+.login_form input{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ffff;
+    height: 40px;
+    color: #ffff;
+}
+.login_form input::placeholder {
+  color: #fff;
+}
+.login_form input:focus {
+  outline: none;
+}
+
+.userCard{
+    width: 500px;
+    margin: auto;
+    padding: 3rem 3rem 0px;
+}
+.form-check-input{
+    width: 18px;
+    height: 18px;
+}
+.userCard label{
+    font-weight: 500;
+}
+
+
+.ClientuserCard{
+    width: 500px;
+    margin: auto;
+}
+.form-check-input{
+    width: 18px;
+    height: 18px;
+}
+.ClientuserCard label{
+    font-weight: 500;
+}
