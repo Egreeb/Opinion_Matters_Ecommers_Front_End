@@ -5,7 +5,7 @@ const about = () => {
     <>
     <div className='container about'>
         <h3 className='text center mb-4 mt-4 text-center'>🧱 About Us / About This Project</h3>
-        <p>Welcome to Opinion Matters Ecommerce — a modern web application built to demonstrate my skills in full-stack web development.</p>
+        <p>Welcome to Opinion Matters Ecommerce — a modern web application built to demonstrate my skills in full-stack web</p>
         <p>This website is designed and developed completely by me using the MERN Stack (MongoDB, Express.js, React, Node.js).</p>
         <br />
         <h4>It features:</h4>
