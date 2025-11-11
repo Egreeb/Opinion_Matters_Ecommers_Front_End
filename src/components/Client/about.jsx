@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const about = () => {
   return (
     <>
     <div className='container about'>
         <h3 className='text center mb-4 mt-4 text-center'>🧱 About Us / About This Project</h3>
-        <p>Welcome to Opinion Matters Ecommerce — a modern web application built to demonstrate my skills in full-stack web</p>
+        <p>Welcome to Opinion Matters Ecommerce — a modern web application built to demonstrate my skills in full-stack web development.</p>
         <p>This website is designed and developed completely by me using the MERN Stack (MongoDB, Express.js, React, Node.js).</p>
         <br />
         <h4>It features:</h4>
@@ -35,8 +35,9 @@ const about = () => {
         <h4>📞 Contact</h4>
         <p>Mobile: +971 547241907</p>
         <p>Email:- gajjudube4@gmail.com</p>
-        <p>GitHub:- </p>
-        <p>LinkedIn:- </p><br /><br />
+        <p>GitHub Front End Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers_Front_End'}>https://github.com/Egreeb/Opinion_Matters_Ecommers_Front_End</Link> </p>
+        <p>GitHub Back End Node Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers'}>https://github.com/Egreeb/Opinion_Matters_Ecommers</Link> </p>
+        <p>LinkedIn:- <Link to={"https://www.linkedin.com/in/gajendra-dube-6b5143198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}>Gajendra Dube</Link> </p><br /><br />
     </div>
 
     </>
