@@ -35,8 +35,8 @@ const about = () => {
         <h4>📞 Contact</h4>
         <p>Mobile: +971 547241907</p>
         <p>Email:- gajjudube4@gmail.com</p>
-        <p>GitHub Front End Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers_Front_End'}>https://github.com/Egreeb/Opinion_Matters_Ecommers_Front_End</Link> </p>
-        <p>GitHub Back End Node Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers'}>https://github.com/Egreeb/Opinion_Matters_Ecommers</Link> </p>
+        <p>GitHub Front End Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers_Front_End'}>Front End Repo</Link> </p>
+        <p>GitHub Back End Node Project:-<Link to={'https://github.com/Egreeb/Opinion_Matters_Ecommers'}>Back End Repo</Link> </p>
         <p>LinkedIn:- <Link to={"https://www.linkedin.com/in/gajendra-dube-6b5143198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}>Gajendra Dube</Link> </p><br /><br />
     </div>
 
