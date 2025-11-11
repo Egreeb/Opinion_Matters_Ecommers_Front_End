@@ -504,6 +504,9 @@ main {
   .carousel-control-prev, .carousel-control-next{
     display: none;
   }
+   .ClientuserCard{
+    width: unset;
+  }
 }
 
 /* ====== Small devices (phones, landscape) ====== */
