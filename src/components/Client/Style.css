@@ -321,29 +321,30 @@ vertical-align: middle !important;
     align-items: center;
     justify-content: space-between;
 }
-.slick-slide div{
-    padding-left: 8px;
-    padding-right: 8px;
-}
 .caro-img{
-    width: 100px;
     height: 100px;
     margin: auto;
 }
+
+.cate-btn_cus{
+  background: transparent;
+  color: #000;
+}
+.cate-btn_cus:hover{
+  background-color: #17a2b8;
+}
+
 .cate-card h5{
-    background-color: black;
+    background-color: brown;
     color: #FFFFFF;
     margin-top: 10px;
-   border-radius: 5px; 
+   border-radius: 3px; 
 }
 .cate-card{
     border-radius: 20px !important;
 }
 .cate-heading{
     /* background: aliceblue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0px 10px;
 }
 .cate-heading h5{
@@ -355,6 +356,7 @@ vertical-align: middle !important;
     color: #FFFFFF;
     margin-top: 10px;
 }
+
 .carousel-caption-cust{
     position: absolute;
     top: 20%;
@@ -511,6 +513,9 @@ main {
     width: unset;
     padding: unset;
   } 
+    .cate-heading{
+    text-align: center;
+  }
 }
 
 /* ====== Small devices (phones, landscape) ====== */
