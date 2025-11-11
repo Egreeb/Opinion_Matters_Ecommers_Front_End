@@ -100,7 +100,7 @@ const handleSubmit = async(e) =>{
         </div><br />
         <div className='text-center mb-5 '>
             <span fontSize="14px" color="text.muted">Already have account? </span>
-            <a href="#">Log in</a>
+            <Link to={'/clientlogin'}>Log in</Link>
         </div>
     </div>
     </>
