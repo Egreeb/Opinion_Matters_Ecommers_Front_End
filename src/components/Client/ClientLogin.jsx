@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AppContext from '../../Context/AppContext'
 import { Bounce, toast } from 'react-toastify'
 
@@ -68,7 +68,7 @@ const handleInput = (e)=>{
                 </div>
                 <div className='text-center  '>
                     <span fontSize="14px" color="text.muted">Don’t have account? </span>
-                    <a href="#">Sign Up</a>
+                    <Link to={'/clientregister'}>Sign Up</Link>
                 </div>
             </div><br />
         </div>
