@@ -34,42 +34,6 @@ const Hompage = () => {
   
 //  console.log(groupBycate)
 
-  var settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 1500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
-  };
-
 
   // find and filter by featured product
 
@@ -171,10 +135,9 @@ const Hompage = () => {
             )}
         </div>
         <hr />
-
       {/* CATEGORY WISE MAPING HERE REDUCE */}
-          {Object.keys(groupBycate).map((category)=> <div>
-            <div className='category-loop'>
+          {Object.keys(groupBycate).map((category)=> (
+            <div key={category} className='category-loop'>
               <div className='cate-heading mb-3'>
                 <button className='btn btn-info cate-btn_cus'>{category}</button>
               </div>
@@ -194,34 +157,47 @@ const Hompage = () => {
               </div>
           <br />
             </div>
-          </div> )}
+          ))}
 
-        {/* <div className='category-loop'>
-          <div className='cate-heading mb-3'>
-            <h5 className='discount'>10% Discount</h5>
-            <h5>Mobile</h5>
-          </div>
-          <Slider {...settings}>
-            {getProduct?.map((data) => {
-              return (
-                <div key={data._id} className='card cate-card'>
-                  <div className="card-body">
-                    <div className='text-center'>
-                      <img src={`${data.imgUrl}`} className="caro-img" alt="..." />
-                      <h5>{data.price}</h5>
-                    </div>
+      {/* CATEGORY WISE MAPING HERE REDUCE */}
+      {isLoading ? (
+         <div className="text-center mb-5">
+            <Skeleton width={`30%`} height={30} />
+            <div className="row mt-3">
+              {Array(6).fill().map((_, i) => (
+                <div key={i} className="col-md-2 col-6">
+                  <div className="card mb-4 p-2">
+                    <Skeleton height={150} />
+                    <Skeleton width={`60%`} height={20} className="mt-2" />
                   </div>
                 </div>
-              )
-            })
-            }
-          </Slider>
-        </div> */}
-
-        <br />
-        <br />
-        <br />
-        <br />
+              ))}
+            </div>
+          </div>
+      ) :(
+          Object.keys(groupBycate).map((category)=> (
+            <div key={category} className='category-loop'>
+              <div className='cate-heading mb-3'>
+                <button className='btn btn-info cate-btn_cus'>{category}</button>
+              </div>
+              <div className="row">
+              {groupBycate[category].map((product) => (
+                      <div className="col-md-3 col-6 col-lg-2">
+                        <div key={product._id} className='card cate-card mb-5'>
+                            <div className="card-body text-center">
+                                <Link to={`/productdetail/${product._id}`}>
+                                  <img src={`${product.imgUrl}`} className="caro-img" alt="..." />
+                                </Link>
+                                <h5>{product.price}</h5>
+                            </div>
+                        </div>
+                      </div>
+              ))}
+              </div>
+          <br />
+            </div>
+          )))}
+        <br /> <br /> <br /> <br />
       </div>
     </>
   )
