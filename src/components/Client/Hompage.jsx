@@ -1,14 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import AppContext from '../../Context/AppContext'
 import banner_1 from '../../assets/banner1.jpg'
 import banner_2 from '../../assets/banner2.jpg'
 import banner_3 from '../../assets/banner3.jpg'
 import star from '../../assets/star.png'
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import Footer from './footer'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const Hompage = () => {
   const {getProduct,Clienttoken,AddtoCart, userCart,decreseQty} = useContext(AppContext)
   // console.log(getProduct)
@@ -18,6 +20,9 @@ const Hompage = () => {
   //   {title:"", cate:"",},
   //   {title:"", cate:"",},
   // ]
+
+
+  
  const groupBycate = getProduct.reduce((acc, item)=>{
   const key = item.category
   if(!acc[key]){
@@ -29,11 +34,49 @@ const Hompage = () => {
   
 //  console.log(groupBycate)
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 1500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  };
+
 
   // find and filter by featured product
 
   const filterbyFeatured = getProduct?.filter((item)=> item.featured)
   console.log(filterbyFeatured)
+
+  const isLoading = !getProduct || getProduct.length === 0;
 
   return (
     <>
@@ -128,9 +171,10 @@ const Hompage = () => {
             )}
         </div>
         <hr />
+
       {/* CATEGORY WISE MAPING HERE REDUCE */}
-          {Object.keys(groupBycate).map((category)=> (
-            <div key={category} className='category-loop'>
+          {Object.keys(groupBycate).map((category)=> <div>
+            <div className='category-loop'>
               <div className='cate-heading mb-3'>
                 <button className='btn btn-info cate-btn_cus'>{category}</button>
               </div>
@@ -150,7 +194,7 @@ const Hompage = () => {
               </div>
           <br />
             </div>
-          ))}
+          </div> )}
 
         {/* <div className='category-loop'>
           <div className='cate-heading mb-3'>
