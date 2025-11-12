@@ -48,12 +48,12 @@ const handleInput = (e)=>{
                     <form action="#" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email address:-</label>
-                            <input type="email" className="form-control" id="email" name='email' value={formData.email} onChange={handleInput} />
+                            <input type="email" className="form-control" id="email" name='email' value={formData.email} onChange={handleInput} required/>
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password:-</label>
-                            <input type="password" className="form-control" id="password" name='password' value={formData.password} onChange={handleInput} />
+                            <input type="password" className="form-control" id="password" name='password' value={formData.password} onChange={handleInput} required/>
                         </div>
                         <div className="form-group">
                             <div className="form-check">
