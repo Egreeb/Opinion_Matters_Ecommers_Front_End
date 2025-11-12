@@ -136,30 +136,6 @@ const Hompage = () => {
         </div>
         <hr />
       {/* CATEGORY WISE MAPING HERE REDUCE */}
-          {Object.keys(groupBycate).map((category)=> (
-            <div key={category} className='category-loop'>
-              <div className='cate-heading mb-3'>
-                <button className='btn btn-info cate-btn_cus'>{category}</button>
-              </div>
-              <div className="row">
-              {groupBycate[category].map((product) => (
-                      <div className="col-md-3 col-6 col-lg-2">
-                        <div key={product._id} className='card cate-card mb-5'>
-                            <div className="card-body text-center">
-                                <Link to={`/productdetail/${product._id}`}>
-                                  <img src={`${product.imgUrl}`} className="caro-img" alt="..." />
-                                </Link>
-                                <h5>{product.price}</h5>
-                            </div>
-                        </div>
-                      </div>
-              ))}
-              </div>
-          <br />
-            </div>
-          ))}
-
-      {/* CATEGORY WISE MAPING HERE REDUCE */}
       {isLoading ? (
          <div className="text-center mb-5">
             <Skeleton width={`30%`} height={30} />
